@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/main.js"></script>
+    <title>Frontend Mentor | Age calculator app</title>
+</head>
+
+<body>
+    <h1 class="titulo_calculadora">Calculadora de Fechas</h1>
+    <main class="contenedor">
+        <form action="#" method="post" id="formulario" onsubmit="return false;">
+            <div class="campos_fecha">
+                <article class="campo dia">
+                    <label for="dia" class="label_dia">DAY</label> <br />
+                    <input type="text" name="dia" class="input_dia" placeholder="DD" />
+                    <p class="error_dia"></p>
+                </article>
+                <article class="campo mes">
+                    <label for="mes" class="label_mes">MONTH</label> <br />
+                    <input type="text" name="mes" class="input_mes" placeholder="MM" />
+                    <p class="error_mes"></p>
+                </article>
+                <article class="campo anio">
+                    <label for="anio" class="label_anio">YEAR</label><br />
+                    <input type="text" name="mes" class="input_anio" placeholder="YYYY" />
+                    <p class="error_anio"></p>
+                </article>
+            </div>
+            <div class="contenedor_boton">
+                <input type="submit" value="CALCULAR" id="boton_fechas" />
+            </div>
+        </form>
+        <hr>
+        <div class="resultados_fechas">
+            <h1 class="resultado anio"><span class="digitos_anio">--</span> years</h1>
+            <h1 class="resultado mes"><span class="digitos_mes">--</span> months</h1>
+            <h1 class="resultado dia"><span class="digitos_dia">--</span> days</h1>
+        </div>
+    </main>
+</body>
+
+</html>

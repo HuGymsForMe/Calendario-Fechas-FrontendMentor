@@ -1,0 +1,147 @@
+/* MIS FUENTES */
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+  }
+@font-face{
+    font-family: 'Poppins RegularBoldItalic';
+    src: url('../assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Poppins Italic';
+    src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
+}
+  
+
+/* GENERAL */
+:root{
+    --violeta: #7547d7;
+    --gris: #F0F0F0;
+    --rojo-error: #FA9EA4;
+}
+
+*{
+    box-sizing: border-box;
+} 
+
+html,body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+}
+
+/* TÍTULO CALCULADORA */
+.titulo_calculadora{
+    color: var(--violeta);
+    font-family: 'Poppins RegularBoldItalic';
+    margin-top: 0rem;
+}
+
+/* CONTENIDO (MAIN)*/
+.contenedor{
+    max-width: 750px;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 15px;
+    border-bottom-right-radius: 100px;
+} 
+
+/* PRIMER DIV (INPUTS) */
+.campos_fecha{
+    display: flex;
+    flex-direction: row;
+}
+
+.campo{
+    margin: 1.5rem;
+}
+
+label, hr{
+    font-family: 'Poppins Bold';
+    color: #8F8F8F;
+    font-size: .7rem;
+}
+
+input{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 3px;
+    border: 1px solid #b7b7b7;
+    font-family: 'Poppins Bold';
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    color: var(--rojo-error);
+    display: none;
+    font-size: .5rem;
+    font-family: 'Poppins Italic';
+}
+
+.contenedor_boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boton_fechas{
+    background-color: var(--violeta);
+    color: var(--gris);
+    border-radius: 4px;
+    padding: .5rem;
+    cursor: pointer;
+    font-family: 'Poppins Bold';
+    border: 0px;
+    margin-bottom: 1rem;
+}
+
+#boton_fechas:hover{
+    background-color: #7D3C98;
+}
+
+/* #boton_fechas:active{
+
+} */
+
+/* SEGUNDO DIV (DÍGITOS Y RESULTADOS) */
+[class^="digitos_"]{
+    color: var(--violeta);
+}
+
+.resultado, [class^="digitos_"]{
+    font-family: 'Poppins RegularBoldItalic';
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.resultado{
+    margin: .5rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+    .campos_fecha {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .campo{
+        margin: .3rem;
+    }
+    .campo:first-child{
+        margin-top: 0rem;
+    }
+    .campo:last-child{
+        margin-bottom: .8rem;
+    }
+  }
